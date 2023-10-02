@@ -19,6 +19,28 @@ body {
   width: 100%;
 }
 
+.fundo{
+  width: 100vw;
+}
+
+.Cadastre-se{
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Amiko", sans-serif;
+  color: white;
+  flex-grow: 1;
+}
+
+.Cadastre-se a{
+  color: white;
+  text-decoration: none;
+}
+
+a.button{
+  color: black;
+  text-decoration: none;
+}
+
 .caixaP {
   min-height: 100vh;
   display: flex;
@@ -36,7 +58,9 @@ body {
 .container input {
   border: none;
   box-sizing: border-box;
+  outline: none;
   width: 100%;
+  font-size: 20px;
   padding: 10px;
   background: none;
   border-bottom: 2px solid white;
@@ -69,6 +93,25 @@ h3 {
   color: white;
 }
 
+.content-center{
+  display: flex;
+  justify-content: center;
+}
+
+.content-center p{
+  color: white;
+  font-family: "Amiko", sans-serif;
+}
+
+.button{
+  padding: 10px 30px;
+  margin-top: 30px;
+  background-color: white;
+  border: none;
+  font-family: "Changa", sans-serif;
+  border-radius: 50px;
+}
+
 .usuario img {
     margin-top: 25px;
      width: 27px; 
@@ -80,11 +123,12 @@ h3 {
     align-items: center;
 }
 
-.senha img {
+.box-input img {
     margin-top: 7,5px;
-     width: 27px; 
+    width: 27px; 
 }
-.senha{
+.box-input{
+    margin-top: 6px;
     justify-content: center;
     display: flex;
     align-items: center;
