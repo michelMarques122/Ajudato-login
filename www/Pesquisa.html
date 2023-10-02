@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pesquisa.css">
+    <title>Pesquisa</title>
+</head>
+<body>
+    <div id="search-container">
+
+        <button id="button"> <a href="index.html">
+             <img alt="lupa" src="img/back.svg"/>
+             </a>
+        </button>
+
+
+        <input type="text" id="search-input" placeholder="Digite sua pesquisa" oninput="showSuggestions()">
+        <button id="search-button" onclick="search()">
+             <img alt="lupa" src="img/lupa.svg"/>
+        </button>
+        <div id="last-query"></div>
+        <div id="suggestions"></div>
+    </div>
+
+    <script>
+        let lastQuery = "";
+        const suggestions = ["ong de animais", "ong de ajuda a crianças", "ong de ajuda a idosos", "ongs"]; 
+
+        function showLastQuery() {
+            const searchInput = document.getElementById('search-input');
+            const lastQueryElement = document.getElementById('last-query');
+
+            if (lastQuery) {
+                lastQueryElement.textContent = `Última consulta: ${lastQuery}`;
+                lastQueryElement.style.display = 'block';
+            } else {
+                lastQueryElement.style.display = 'none';
+            }
+
+            searchInput.value = '';
+        }
+
+        function search() {
+            const searchInput = document.getElementById('search-input');
+            lastQuery = searchInput.value.trim();
+            showLastQuery();
+        }
+
+        function showSuggestions() {
+            const searchInput = document.getElementById('search-input');
+            const suggestionsContainer = document.getElementById('suggestions');
+
+            const query = searchInput.value.trim();
+            suggestionsContainer.innerHTML = '';
+
+            if (query.length === 0) {
+                suggestionsContainer.style.display = 'none';
+                return;
+            }
+
+            const matchingSuggestions = suggestions.filter(suggestion =>
+                suggestion.toLowerCase().includes(query.toLowerCase())
+            );
+
+            if (matchingSuggestions.length > 0) {
+                matchingSuggestions.forEach(suggestion => {
+                    const suggestionElement = document.createElement('div');
+                    suggestionElement.className = 'suggestion';
+                    suggestionElement.textContent = suggestion;
+                    suggestionElement.addEventListener('click', () => {
+                        searchInput.value = suggestion;
+                        suggestionsContainer.style.display = 'none';
+                    });
+                    suggestionsContainer.appendChild(suggestionElement);
+                });
+                suggestionsContainer.style.display = 'block';
+            } else {
+                suggestionsContainer.style.display = 'none';
+            }
+        }
+    </script>
+
+    <div class="footer">
+        <a href="home.html" class="footer-button"> <img src="img/home.svg"></a></a>
+        <a href="#" class="footer-button"><img src="img/pessoa.svg"></a></a>
+        <a href="#" class="footer-button"><img src="img/present.svg"></a></a>
+        <a href="" class="footer-button"><img src="img/menu1.svg"></a></a>
+    </div>
+
+
+</body>
+</html>

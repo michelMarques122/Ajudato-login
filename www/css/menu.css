@@ -1,0 +1,22 @@
+body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        #search-container {
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+         #button {
+            border-radius: 10rem;
+            padding: 7px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color:white;
+            color: white;
+            border: none;
+        }
+

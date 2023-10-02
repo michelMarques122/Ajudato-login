@@ -1,0 +1,319 @@
+
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B);
+
+  @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Caprasimo&family=Open+Sans:wght@300&display=swap');
+
+
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: #30A5EA;
+}
+
+.ajudato{
+    position: absolute;
+    top: 1rem;
+    width: 15rem;
+}
+
+
+
+/*box da pesquisa*/
+.search-box{
+    position: absolute;
+    top: 5%;
+    left: 20rem;
+    transform: translate(-50%, -50%);
+    background:#30A5EA;
+    height: 25px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.search-txt {
+    
+    background: transparent; 
+    border: none; 
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: 0.5s;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.search-txt:focus {
+    outline: none;
+    border: none;
+}
+
+.search-bnt{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #30A5EA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 00.5s;
+
+}
+
+.search-box:hover > .search-txt{
+    width: 100px;
+padding: 0 6px;
+}
+
+
+
+h1 {
+    text-align: center; /* Centralize o título */
+    margin-top: 20px; /* Espaçamento acima do título */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+}
+
+/*box pesquisa acaba aqui*/
+
+
+#menu-h{
+    margin-top: 25%;
+    padding: 0;
+    background-color: #ffffff ;
+    border-radius: 50px;
+    text-align: center;
+     
+}
+
+#menu-h li{
+    display: inline;
+}
+
+#menu-h li a {
+    
+    color: black;
+    text-decoration:none;
+    display: inline-block;
+    padding: 10px;
+    font-family: Open Sans;
+    transition: 0.8s;
+    
+}
+
+#menu-h a:hover{
+    background-color: rgba(99, 198, 251, 0.443);
+    border-radius: 25px;
+    transition: 0.5s;
+
+}
+
+/*começa carrossel*/
+
+.content{
+    height: 190px;
+    width: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 25%;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+
+}
+
+.bar{
+    width: 25px;
+    height:10px ;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin: 12px;
+    cursor: pointer;
+    transition: 0.7s;
+
+}
+.bar:hover{
+    background-color: white;
+}
+
+input{
+    display: none;
+}
+
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide{
+    width: 20%;
+    transition: 0.6s;
+
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#slide1:checked~.s1{
+    margin-left:0 ;
+}
+
+#slide2:checked~.s1{
+    margin-left: -20%;
+}
+
+#slide3:checked~.s1{
+    margin-left: -40%;
+}
+
+
+/*botão doar*/
+.button {
+    text-align: center;
+    margin-top:55%;
+    margin-left: center;
+    border-radius: 10px;
+    background-color: #056BB3;
+    font-size: 16px;
+    width: 141px;
+    height: 32px;
+    flex-shrink: 0;
+    border: none;
+    
+}
+
+.button a {
+    text-decoration: none;
+    border-radius: 16px;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+
+/*cards*/
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 165px;
+    height: 300px; /* Altura fixa para todos os cards */
+    border-radius: 10px;
+    margin: 5px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #30A5EA;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 75%;
+    margin-top: 10px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.card-text {
+    padding: 4px;
+    text-align: right;
+    overflow: auto;
+    flex-grow: 1;
+    
+    /* Estilos da barra de rolagem */
+    scrollbar-width: thin; /* Largura fina para a barra de rolagem */
+    scrollbar-color: #3498db #4ACFCA; /* Cor da barra de rolagem */
+}
+
+.card-text::-webkit-scrollbar {
+    width: 5px; /* Largura da barra de rolagem para navegadores baseados em Webkit (como o Google Chrome) */
+}
+
+.card-text::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Cor do polegar da barra de rolagem */
+}
+
+.card-text::-webkit-scrollbar-track {
+    background-color: #4ACFCA; /* Cor de fundo da barra de rolagem */
+}
+
+.card-text p:first-child {
+    font-size: 20px; /* Tamanho da fonte para o primeiro parágrafo (equivalente a um h1) */
+    font-weight: bold; /* Negrito para o primeiro parágrafo */
+    margin-bottom: 10px; /* Espaçamento inferior para separá-lo dos outros parágrafos */
+
+}
+
+
+.card-container .card:hover {
+    background-color: #0681D1;
+    color: white;
+    margin-top: -1px;
+    box-shadow: 2px 5px 5px #056BB3;
+    border-color: #056BB3;
+    transition: 0.5s;
+}
+
+.read-more-button {
+    background-color: #056BB3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #30A5EA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    
+
+}
+
+.footer-button {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+}
+
+.footer-button:hover {
+    background-color: #056BB3;
+}
+
+.splash{
+    align-self: center;
+    width: 100%;
+    height: 100%;
+}

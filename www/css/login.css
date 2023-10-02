@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Amiko";
+  src:
+    local("Amiko"),
+    url("../components/Amiko-Regular.ttf") format("woff");
+} 
+@font-face {
+  font-family: "Changa";
+  src:
+    local("Changa"), /* Altere "Amiko" para "Changa" ou remova a declaração local */
+    url("../components/Changa-Regular.ttf") format("woff");
+}
+
+body {
+  margin: 0;
+}
+
+.container .ajudato {
+  width: 100%;
+}
+
+.caixaP {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #30a5ea;
+  border-radius: 90px 90px 0 0;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.container input {
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border-bottom: 2px solid white;
+  color: white; 
+}
+
+.container input::placeholder {
+  color: white;
+}
+
+.usuario {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-left: 5px;
+  margin-top: -80px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Amiko", sans-serif;
+  color: #3A4F62; /* Cor sólida */
+}
+
+h3 {
+  font-weight: 500; /* Valor numérico para font-weight */
+  text-align: center;
+  font-size: 22px;
+  font-family: "Changa", sans-serif;
+  color: white;
+}
+
+.usuario img {
+    margin-top: 25px;
+     width: 27px; 
+}
+
+.usuario{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.senha img {
+    margin-top: 7,5px;
+     width: 27px; 
+}
+.senha{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
